@@ -34,4 +34,16 @@ window.onload = function() {
   //retrieving html elements to manipulate
   const htmlElement = document.querySelector(".excuse");
   htmlElement.innerHTML = excuse;
+
+  const refreshBtn = document.getElementById("btnRefresh");
+
+  function handleClick() {
+    window.location.reload();
+  }
+
+  refreshBtn.addEventListener("click", handleClick);
+
+  let buttonwords = "Click me for a new excuse!";
+  const buttonElement = document.querySelector(".buttonMessage");
+  buttonElement.innerHTML = buttonwords;
 };
